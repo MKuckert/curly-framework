@@ -1,0 +1,4 @@
+ - CurlyX_Archive-Paket in Curly verschieben
+ - CurlyX_Db fertig implementieren
+ - CurlyX_Db ausgiebigst testen
+ - HttpClient aufbereiten und in Curly_Http übernehmen

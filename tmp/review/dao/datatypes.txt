@@ -1,0 +1,39 @@
+==Zeichendatentypen==
+ char|character [(LENGTH)]
+ 	> fixe Länge, durch weiße Zeichen erweitert
+ varchar|char varying|character varying [(LENGTH)]
+ 	> variable Länge mit Maximallänge
+ text
+ 	> variable Länge ohne Maximallänge
+
+==Binäre Datentypen==
+ bool|boolean
+ 	> Wahrheitswert
+ bit|binary (LENGTH)
+ 	> Binär, fixe Länge
+ bit varying|varbinary (LENGTH)
+ 	> Binär, variable Länge mit Maximallänge
+ blob
+ 	> Binär, variable Länge ohne Maximallänge
+
+==Numerische Datentypen==
+ numeric|decimal|dec [(PRECISION [,SCALE]]
+ 	> beliebige Genauigkeit
+ int|integer|smallint
+ 	> Ganzzahlen
+ float|real|double|double precision
+ 	> IEEE-754 Gleitkommazahlen
+ serial
+ 	> fortlaufender nummerischer ganzzahliger Datentyp
+ 
+==Zeitdatentypen==
+ date
+ 	> Datumsangabe
+ time
+ 	> Zeitangabe
+ timestamp
+ 	> Datums- und Zeitangabe
+
+==Aufzählungen==
+ enum
+ 	> einfacher Aufzählungsdatentyp

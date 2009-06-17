@@ -1,0 +1,7 @@
+=Record=
+ Record load( Criteria criteria )
+ Record loadByPk( Criteria criteria )
+ array loadList( Criteria criteria )
+ boolean save()
+ boolean delete()
+ int deleteList( Criteria criteria )

@@ -1,0 +1,16 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<?php
+			echo $this->headTitle()
+				.$this->headLink()
+				.$this->headMeta()
+				.$this->headScript()
+				.$this->headStyle();
+		?>
+	</head>
+	<body>
+		<div id="methods"><?php echo $this->partial( 'methods.phtml' ); ?></div>
+		<?php echo $this->layout()->content; ?>
+	</body>
+</html>

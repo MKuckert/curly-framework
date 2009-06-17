@@ -1,0 +1,11 @@
+<?php echo $this->partial('partial/head.phtml'); ?>
+<?php $this->declareVars(array(
+	'httpCode'			=> '',
+	'httpMessage'		=> 'No Error',
+)); ?>
+
+		<div>
+			<h1><?php echo $this->httpCode.' '.$this->httpMessage; ?></h1>
+		</div>
+
+<?php echo $this->partial('partial/foot.phtml'); ?>

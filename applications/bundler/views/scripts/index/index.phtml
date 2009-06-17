@@ -1,0 +1,54 @@
+<?php
+$this->declareVars(array(
+	'columnCount'	=> 3
+));
+echo $this->doctype();
+?>
+<html>
+	<head>
+		<base href="http://bundler.curlybracket.de/" />
+		<?php echo
+			$this->headTitle() .
+			$this->headMeta() .
+			$this->headLink() .
+			$this->headScript() .
+			$this->headStyle()
+		; ?></head>
+	<body>
+		<form action="index/bundle" method="post" onsubmit="return !onFormSubmit();">
+			<div class="Panel PackageList">
+				<div class="PackageListInline">
+					<?php
+						$packageCount=count($this->packages);
+						$perColumn=ceil($packageCount/$this->columnCount);
+						
+						for($column=0; $column<$this->columnCount; $column++):
+					?>
+					<ul>
+					<?php	foreach(array_slice($this->packages, $column*$perColumn, $perColumn) as $package): ?>
+						<li>
+							<input id="Control_<?php echo $package; ?>" type="checkbox" name="BundleItem[]" value="<?php echo $package; ?>" /><label for="Control_<?php echo $package; ?>"><?php echo $package; ?></label>
+						</li>
+					<?php	endforeach; ?>
+					</ul>
+					<?php endfor; ?>
+					
+					<div class="CheckAllControl">
+						<input id="CheckAllCheckbox" type="checkbox" onchange="checkAllCBs(this.checked, this);" />
+						<label for="CheckAllCheckbox">all</label>
+					</div>
+				</div>
+			</div>
+			<div class="Panel FormControl">
+				<button id="SubmitButton" type="submit" name="submit" value="submit">
+					bundle
+				</button>
+			</div>
+		</form>
+		<script type="text/javascript">
+//<![CDATA[
+Curly.CustomCheckBox.initAll();
+//]]>
+		</script>
+	</body>
+</html>

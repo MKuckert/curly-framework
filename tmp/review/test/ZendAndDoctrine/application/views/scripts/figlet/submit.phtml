@@ -1,0 +1,6 @@
+<?php echo $this->action( 'form', 'figlet' ); ?>
+<?php if( $this->valid ): ?>
+	<pre><?php echo $this->escape( $this->figletRenderResult ); ?></pre>
+<?php else: ?>
+	not valid
+<?php endif; ?>

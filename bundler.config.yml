@@ -1,0 +1,5 @@
+---
+debug:
+    defaultLocale: de_DE
+    setAppLocale: true
+    defaultTimezone: Europe/Berlin

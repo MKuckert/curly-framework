@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://schema.curlybracket.de/Installer_v0.1.xsd"
+	elementFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:installer="http://schema.curlybracket.de/Installer_v0.1.xsd"
+	attributeFormDefault="unqualified">
+	<complexType name="author">
+		<annotation>
+			<documentation>The author(s) of this extensions</documentation>
+		</annotation>
+		<sequence>
+			<element name="name" maxOccurs="1" minOccurs="0" type="string">
+			</element>
+			<element name="email" type="string" minOccurs="0" maxOccurs="1">
+			</element>
+			<element name="url" type="string" minOccurs="0" maxOccurs="1"></element>
+		</sequence>
+	</complexType>
+	<complexType name="manifest">
+		<annotation>
+			<documentation>The container type for a manifest file
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="author" type="installer:author" maxOccurs="unbounded"
+				minOccurs="0">
+			</element>
+			<element name="package" type="installer:package" maxOccurs="1"
+				minOccurs="1"></element>
+		</sequence>
+	</complexType>
+	<element name="manifest" type="installer:manifest">
+		<annotation>
+			<documentation>The root tag for a manifest file</documentation>
+		</annotation>
+	</element>
+	<complexType name="package">
+		<annotation>
+			<documentation>Package definitions</documentation>
+		</annotation>
+		<all>
+            <element name="name" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="version" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="published" type="dateTime" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="description" type="string" maxOccurs="1"
+				minOccurs="0">
+				<annotation>
+					<documentation>
+						A short module description
+					</documentation>
+				</annotation>
+			</element>
+			<element name="dependencies" type="installer:dependencies"
+				maxOccurs="1" minOccurs="0">
+				<annotation>
+					<documentation>Required</documentation>
+				</annotation>
+			</element>
+			<element name="files" type="installer:files" maxOccurs="1"
+				minOccurs="0">
+			</element>
+		</all>
+	</complexType>
+	<complexType name="dependency">
+		<annotation>
+			<documentation>A dependency to any other item</documentation>
+		</annotation>
+		<attribute name="name" type="string" use="required"></attribute>
+		<attribute name="version" type="string" use="optional"></attribute>
+		<attribute name="type" type="string" use="required"></attribute>
+	</complexType>
+	<complexType name="dependencies">
+		<annotation>
+			<documentation>Dependencies of this package to other
+				items</documentation>
+		</annotation>
+		<sequence>
+			<element name="dependency" type="installer:dependency"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+    	</sequence>
+	</complexType>
+	<complexType name="files">
+		<sequence>
+			<element name="file" type="installer:file" maxOccurs="unbounded"
+				minOccurs="1"></element>
+		</sequence>
+	</complexType>
+	<complexType name="file">
+		<attribute name="name" type="string" use="required"></attribute>
+		<attribute name="base" type="string" use="optional" default="/"></attribute>
+	</complexType>
+</schema>

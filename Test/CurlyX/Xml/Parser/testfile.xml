@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE author [
+	<!ELEMENT author EMPTY>
+	<!ATTLIST author name ENTITY #REQUIRED>
+	<!ENTITY mk PUBLIC "Martin Kuckert" "The URI" NDATA name>
+	<!NOTATION name PUBLIC "foo">
+	
+	<!ENTITY MyEntity PUBLIC "Martin Kuckert" "The URI">
+]>
+<root>
+	<level1 attr1="a" attr2="b">
+		<level2 attr21="aa" attr22="bb" />
+	</level1>
+	<?php phpinfo(); ?>
+	<text-data>Hallo</text-data>
+	<with-ns xmlns:foo="bar">
+		<foo:hallo foo:attr1="bar" />
+	</with-ns>
+	<author name="mk" />
+</root>

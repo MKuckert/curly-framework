@@ -1,0 +1,83 @@
+* {
+	padding:			0;
+	margin:				0;
+	font:				11pt Arial;
+}
+
+body {
+	margin:				30px;
+}
+
+.Panel {
+	padding:			0 20px;
+	margin-bottom:		10px;
+	border:				1px solid #0A7;
+}
+
+.PackageList {
+	padding-top:		20px;
+	background-image:	url(background.gif);
+}
+
+.PackageListInline {
+	padding-bottom:		20px;
+	background-image:	url(ZFLogo.png);
+	background-repeat:	no-repeat;
+	background-position: 92% 98.5%;
+}
+
+.PackageList ul {
+	width:				18em;
+	float:				left;
+	list-style:			none;
+}
+
+.PackageList ul li {
+	line-height:		1.3em;
+}
+
+.PackageList label {
+	vertical-align:		middle;
+	padding-left:		3px;
+}
+
+.CheckAllControl {
+	padding-top:		20px;
+	clear:				both;
+	text-align:			right;
+}
+
+.CheckAllControl label {
+	font-weight:		bold;
+}
+
+.FormControl {
+	padding-top:		30px;
+	padding-bottom:		30px;
+	border-color:		#F63;
+	background-color:	#FDC;
+	text-align:			center;
+}
+
+#SubmitButton {
+	padding:			5px;	
+	font-size:16pt;
+	font-weight:bold;
+}
+
+.CustomCheckBox {
+	display:			none;
+}
+
+label.CustomLabel {
+	padding-left:		23px;
+	background-repeat:	no-repeat;
+	background-image:	url(delete.png); 
+}
+label.CustomLabel:hover {
+	color:red; 
+}
+
+label.Checked {
+	background-image:	url(tick.png); 
+}

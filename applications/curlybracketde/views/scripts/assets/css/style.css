@@ -1,0 +1,61 @@
+* {
+	padding:		0;
+	margin:			0;
+}
+
+pre {
+	font-size:		8pt;
+}
+
+.sr {
+	color:			blue;
+}
+
+.sl {
+	color:			blue;
+}
+
+.sb {
+	color:			blue;
+}
+
+.so {
+	color:			#999;
+}
+
+.cn {
+	
+}
+
+.cm {
+	color:			green;
+}
+
+.st {
+	color:			red;
+}
+
+.in, .fl {
+	color:			fuchsia;
+}
+
+.va {
+	color:			darkred;
+}
+
+.sp {
+	color:			red;
+}
+
+.ot {
+	
+}
+
+
+.st a {
+	color:			red;
+}
+
+.st a:hover {
+	color:			maroon;
+}

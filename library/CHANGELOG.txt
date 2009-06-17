@@ -1,0 +1,25 @@
+== Version 1.0 - 17.06.2009 ==
+ - Bugfix in StringStream
+
+== Beta - 19.05.2009 ==
+ - Bugfixes
+   > AssetManager
+   > EventDispatcher
+   > Loader
+   > StringStream
+   > Callback / Delegate
+ - Erweiterungen
+   > Tokens
+   > Serial-/Collection
+ - PhpFormatter neu fertig implementiert
+ - Kleine Änderungen
+
+== PreAlpha2 - 19.12.2008 ==
+ - Curly_Sourcecode_DocComment_Parser um parseAll-Methode erweitert.
+ - Curly_Sourcecode_Php_Tokens kommentiert und um die stripWhitespace-Methode erweitert.
+ - Curly_Types_Collection_Serial::removeAt in remove korrigiert und beschleunigt
+ - Curly_Types_BigDecimal hinzugefügt
+ - Curly_Util_ClassCreation hinzugefügt
+ - CurlyX_Archive_Package komplett neu geschrieben
+ - CurlyX_Db-Package deutlich erweitert
+ - CurlyX_Xml_Parser-Package hinzugefügt

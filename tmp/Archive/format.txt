@@ -1,0 +1,17 @@
+= Header =
+3 Byte		Dateisignatur (immer "[@]")
+3 Byte		Compilerversion (zur Zeit "0.1")
+4 Byte		Dateiflags (Kompression, Verschlüsselung, etc.)
+16 Byte		Compilersignatur
+5 Byte		Reserviert (Muss aktuell immer mit 0-Bytes gefüllt werden)
+1 Byte		Anzahl Hashtabellen-Einträge ($n)
+
+= Hashtabelle ($n-Einträge) =
+1 Byte		Datensatznamenslänge ($m)
+4 Byte		Datensatzlänge
+4 Byte		Offset zum Datensatz (Ab Beginn dieser Datei)
+1 Byte		Infoflag
+$m Byte		Datensatzname
+
+= Datensätze =
+<<Binärdaten>>

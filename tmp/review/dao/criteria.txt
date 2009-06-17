@@ -1,0 +1,13 @@
+=Criteria=
+ integer limit
+ 	> Maximale Zahl zu selektierender Datensätze
+ integer offset
+ 	> Anzahl zu übergehende Datensätze
+ array orderBy
+ 	> Sortieranweisungen. Entscheidend ist die Reihenfolge der Schlüssel
+ 	> Index entspricht Spaltenname, Wert entsprecht SORT_ASC oder SORT_DESC
+ string condition
+ 	> Bedingung zur Selektion eines Datensatzes. Erlaubt den Einsatz von Platzhalter
+ array parameters
+ 	> Parameter für den condition-Parameter
+ 	> Schlüssel muss auf Parametername passen, Wert gibt Ersatz für Parameter an

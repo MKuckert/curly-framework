@@ -1,0 +1,19 @@
+<?php
+	$this->headTitle( 'Figlet' );
+?>
+<?php
+	$this->placeholder( 'formContent' )->captureStart();
+	echo $this->formSelect( 'font', $this->request->font, null, $this->fonts )
+		.$this->formText( 'text', $this->request->text )
+		.$this->formSubmit( 'submit', 'render' );
+	$this->placeholder( 'formContent' )->captureEnd();
+?>
+
+<?php
+	echo $this->form( 'form', array(
+			'method' => 'post',
+			'action' => $this->url( array( 'controller' => 'figlet', 'action' => 'submit' ) )
+		),
+		$this->placeholder( 'formContent' )
+	);
+?>

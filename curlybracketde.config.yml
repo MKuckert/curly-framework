@@ -1,0 +1,75 @@
+---
+debug:
+    builder:
+        outputPath: ../tmp/
+        navigationItems:
+            -
+                label: Home
+                url: %BASEURL%/Content/Home
+                title: Auf die Startseite
+            -
+                label: Downloads
+                url: http://content.curlybracket.de/
+                visible: true
+            -
+                label: Impressum
+                url: %BASEURL%/Content/Impressum
+        pageTitle: "< curlybracket.de >"
+    errorReporting: E_ALL
+    frontController:
+        throwExceptions: true
+    database:
+        -
+            id: DB
+            adapter: PDO_Mysql
+            params:
+                dbname: curlybracket_de
+                username: root
+                password: ""
+    cache:
+        id: cache
+        frontend:
+            type: core
+            params:
+                caching: true 
+                lifetime: 3600 
+                logging: false 
+                write_control: false 
+                automatic_serialization: true
+                automatic_cleaning_factor: 10
+                ignore_user_abort: true
+        backend:
+            type: file
+            params:
+                cache_dir: ../cache
+                file_locking: true
+                read_control: true
+                read_control_type: crc32
+                hashed_directory_level: 2
+                hashed_directory_umask: 0700
+                cache_file_umask: 0700
+    log:
+        -
+            id: logger
+            writer:
+                -
+                    type: stream
+                    url: ../logs/curlybracketde.log
+                    formatter:
+                        type: simple
+                        format: "%timestamp% %priorityName% (%priority%): %message%\n"
+            filter:
+                -
+                    type: priority
+                    priority: 7
+                    operator: "<="
+    translate:
+        -
+            id: dirscan
+            adapter:
+                type: gettext
+                data: ../locale/curlybracketde/
+                locale: de
+                options:
+                    clear: false
+                    scan: directory

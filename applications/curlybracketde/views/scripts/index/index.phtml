@@ -1,0 +1,11 @@
+<?php echo $this->partial('partial/head.phtml', $this->getVars()); ?>
+
+		<div id="MainCanvas">
+			<pre><?php
+	echo $this->partial('partial/page.phtml');
+	echo $this->contents
+?></pre>
+		</div>
+<?php echo $this->partial('partial/js/startapp.phtml'); ?>
+
+<?php echo $this->partial('partial/foot.phtml'); ?>

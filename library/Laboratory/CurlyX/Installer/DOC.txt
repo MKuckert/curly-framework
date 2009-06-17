@@ -1,0 +1,30 @@
+== Konfiguration ==
+ - Liste von Bezugsquellen:
+	http://modules.curlybracket.de/{MODULE}
+	http://example.com/modules/?module={MODULE}
+	=> Ist kein {MODULE}-Parameter angegeben, wird der Name an das Ende der URL
+	   gehangen
+ - Temporäres Verzeichnis
+	/tmp
+
+== Aufgaben ==
+ - ZIP-Archiv von Bezugsquelle laden
+ - Entpacken in temporäres Verzeichnis
+ - Lokale Dateien iterativ durch neue Dateien ersetzen
+
+
+== Manifest ==
+ - installer:manifest ändern
+ - Hinzufügen:
+	<params>
+		<param name="count" type="text" default="10" label="Count" description="The number of items to display (default is 10)" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+	</params>
+ - ModuleContext bei startUp übergeben

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<installer:manifest xmlns:installer="http://schema.curlybracket.de/Installer_v0.1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://schema.curlybracket.de/Installer_v0.1.xsd Installer_v0.1.xsd ">
+  <author>
+    <name>Martin Kuckert</name>
+    <email>martin@curlybracket.de</email>
+    <url>http://curlybracket.de/</url>
+  </author>
+  <package>
+  	<name>MyModule</name>
+  	<version>0.1pa</version>
+  	<published>2008-12-10T00:00:00</published>
+  	<description>Is good for this and for that.</description>
+  	<dependencies>
+  		<dependency type="module" name="SharpLite" version="1.0" />
+  		<dependency type="module" name="XmlParser" version="1.1" />
+  		<dependency type="parser" name="MyParser" version="0.8" />
+  	</dependencies>
+  	<files>
+  		<file name="MyClass.php" base="MyDir" />
+  		<file name="MySecondClass.php" base="MyDir/Second" />
+  	</files>
+  </package>
+</installer:manifest>

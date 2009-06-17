@@ -1,0 +1,129 @@
+---
+debug:
+    additionalSections:
+        - auth
+    database:
+        -
+            id: cdcolDB
+            adapter: PDO_Mysql
+            params:
+                dbname: cdcol
+                username: root
+                password: ""
+        -
+            id: testDB
+            adapter: PDO_Mysql
+            params:
+                dbname: test
+                username: root
+                password: ""
+    cache:
+        id: mainCache
+        frontend:
+            type: core
+            params:
+                caching: true 
+                lifetime: 3600 
+                logging: false 
+                write_control: false 
+                automatic_serialization: true 
+                automatic_cleaning_factor: 10 
+                ignore_user_abort: true
+        backend:
+            type: file
+            params:
+                cache_dir: ../cache
+                file_locking: true
+                read_control: true 
+                read_control_type: crc32
+                hashed_directory_level: 2
+                hashed_directory_umask: 0700 
+                file_name_prefix:  
+                cache_file_umask: 0700
+    log:
+        -
+            id: mainLogger
+            writer:
+                -
+                    type: stream
+                    url: ../logs
+                    formatter:
+                        type: xml
+                        rootElement: logEntry
+                        elementMap:
+                            lvl: priority
+                            msg: message
+                -
+                    type: stream
+                    url: php://output
+                    formatter:
+                        type: simple
+                        format: "%timestamp% %priorityName% (%priority%): %message%\n"
+                -
+                    type: db
+                    adapterID: testDB
+                    tableName: log
+                    columnMapping:
+                        lvl: priority
+                        msg: message
+                -
+                    type: mock
+                    filter:
+                        -
+                            type: suppress
+                            suppress: false
+            filter:
+                -
+                    type: message
+                    regexp: /^[a-z]$/i
+                -
+                    type: priority
+                    priority: 7
+                    operator: "<="
+            priorities:
+                CUSTOM: 8
+                FOO: 9
+    translate:
+        -
+            id: dirscan
+            adapter:
+                type: gettext
+                data: ../locale/
+                locale: de
+                options:
+                    clear: false
+                    scan: directory
+        -
+            id: foo
+            adapter:
+                type: array
+                data:
+                    foo: bar
+                    asd: 123
+                locale: de
+    auth:
+        -
+            id: defaultAuth
+            adapter:
+                type: dbtable
+                adapterID: testDB
+                tableName: auth
+                identityColumn: identity
+                credentialColumn: credential
+                credentialTreatment: "SHA1(CONCAT('SALT', ?))"
+        -
+            id: httpAuth
+            adapter:
+                type: http
+                accept_schemes: basic digest
+                realm: Authorized Only
+                digest_domains: /authOnly
+                nonce_timeout: 3600 
+                proxy_auth: false
+                resolver:
+                    basic:
+                        type: file
+                        filename: ../tmp/basic.txt
+                    digest:
+                        type: file
+                        filename: ../tmp/digest.txt

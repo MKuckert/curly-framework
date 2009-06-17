@@ -1,0 +1,7 @@
+---
+applications:
+    bundler:
+        active: true
+    curlybracketde:
+        active: true
+defaultApplication: bundler

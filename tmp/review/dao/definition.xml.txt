@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+<definition>
+	<table name="TABLENAME" [charset="CHARSET"]>
+		<columns>
+			<column name="COLUMNNAME" type="DATATYPE" [null="true|false"] [default="DEFAULTVALUE"] />
+			<column ... />
+		</columns>
+		<keys>
+			<primary [name="KEYNAME"]>
+				<column name="COLUMNNAME" [length="UINTEGER"] />
+				<column ... />
+			</primary>
+			<unique [name="KEYNAME"]>
+				<column name="COLUMNNAME" [length="UINTEGER"] />
+				<column ... />
+			</unique>
+			<index [name="KEYNAME"]>
+				<column name="COLUMNNAME" [length="UINTEGER"] />
+				<column ... />
+			</index>
+			<index [name="KEYNAME"]>
+				...
+			</index>
+			<foreign [name="KEYNAME"]>
+				<columns>
+					<column name="COLUMNNAME" [length="UINTEGER"] />
+					<column ... />
+				</columns>
+				<references table="TABLENAME" [match="full|partial|simple"] [ondelete="restrict|cascade|set null|no action"] [onupdate="restrict|cascade|set null|no action"]>
+					<column name="COLUMNNAME" [length="UINTEGER"] />
+					<column ... />
+				</references>
+			</foreign>
+		</keys>
+	</table>
+	<table ... >
+		...
+	</table>
+	<include file="FILEPATH" />
+	<include ... />
+</definition> -->

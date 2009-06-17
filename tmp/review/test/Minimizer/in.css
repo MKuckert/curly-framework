@@ -1,0 +1,55 @@
+* {
+	margin:					0;
+	padding:					0;
+	outline:					0;
+}
+
+html, body {
+	height:					100%;
+}
+
+body {
+	font:						10pt Verdana, sans-serif;
+	overflow:					hidden;
+	background:				url(images/background.png) no-repeat top center;
+}
+
+ul {
+	list-style:				none;
+	margin:					10px;
+}
+
+a {
+	color:						#284311;
+}
+
+#Main {
+	width:						785px;
+	padding:					2px 1px 40px 15px;
+	background:				url(images/opaque.png) no-repeat top left;
+	position:					absolute;
+	right:						210px;
+	bottom:					30px;
+}
+#Content {
+	height:					462px;
+	padding:					5px;
+	overflow:					auto;
+}
+
+#Navigation {
+	width:						200px;
+	height:					400px;
+	position:					absolute;
+	right:						0;
+	bottom:					145px;
+	background:				url(images/nav.png) no-repeat top right;
+}
+
+#Footer {
+	color:						#222;
+	font-size:					8pt;
+	position:					absolute;
+	left:						10px;
+	bottom:					10px;
+}

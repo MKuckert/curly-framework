@@ -1,0 +1,6 @@
+---
+StatisticItem:
+  columns:
+    userAgent: string(200)
+    requestUri: string(200)
+    requestTime: timestamp

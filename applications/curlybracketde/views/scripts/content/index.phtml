@@ -1,0 +1,11 @@
+<?php echo $this->partial('partial/head.phtml', $this->getVars()); ?>
+
+		<div id="MainCanvas">
+			<pre><?php echo $this->partial('partial/page.phtml'); ?>
+
+<?php echo CurlyBracketDe_Page::replaceContent(Zend_Registry::get('config')->builder->outputPath.'/content.php', $this->content); ?>
+</pre>
+		</div>
+<?php echo $this->partial('partial/js/startapp.phtml'); ?>
+
+<?php echo $this->partial('partial/foot.phtml'); ?>

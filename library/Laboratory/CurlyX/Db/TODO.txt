@@ -1,0 +1,2 @@
+ - Ist im Destruktor noch eine Transaktion aktiv -> Rollback
+ - INI-Parameter pdo.dsn.* beachten

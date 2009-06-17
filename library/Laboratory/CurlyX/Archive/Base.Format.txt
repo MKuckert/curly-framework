@@ -1,0 +1,19 @@
+= Header =
+10 Byte		Magic Bytes des Formates (Immer "archv-base")
+3 Byte		Compilerversion (Zum Beispiel "0.1")
+1 Byte		Länge der Compilersignatur (C)
+C Byte		Compilersignatur
+4 Byte		Algorithmus-Identifier					// Der Parser beachtet nur die unteren 2 Byte, d.h. die anderen beiden können andernwertig verwendet werden.
+4 Byte		Länge der weiteren Headerdaten (A)
+A Byte		Weitere Headerdaten
+1 Byte		Anzahl der Datensätze im Archiv
+
+= Hashtabelle ($n-Einträge) =
+1 Byte		Datensatznamenslänge (N)
+4 Byte		Datensatzlänge
+4 Byte		Offset zum Datensatz (Ab Beginn dieser Datei)
+1 Byte		Infoflag
+N Byte		Datensatzname
+
+= Datensätze =
+<<Binärdaten>>

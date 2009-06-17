@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<pair>
+		<key>foo1</key>
+		<value>bar1</value>
+	</pair>
+	<foo>
+		<u>foo2</u>
+		<o>bar2</o>
+	</foo>
+	<asd>
+		<key>foo3</key>
+		<value>bar3</value>
+	</asd>
+</root>

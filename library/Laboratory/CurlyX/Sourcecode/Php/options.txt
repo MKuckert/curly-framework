@@ -1,0 +1,32 @@
+closingSquareBracketInNewline:
+	Öffnende geschweifte Klammer in neuer Zeile platzieren
+elseTokenInNewLine:
+	else-Anweisung in neue Zeile platzieren
+elseIfSeparated:
+ - elseif-Anweisung verwenden (alternativ else if)
+
+
+ - catch-Anweisung in neue Zeile platzieren
+ - Leerzeichen zwischen Funktionsname und öffnender runder Klammer der Argumentenliste in der Deklaration
+ - Leerzeichen zwischen runder Klammer und Argumentenliste in der Deklaration
+ - Leerzeichen zwischen runde Klammern um leere Argumentenliste in der Deklaration
+ - Leerzeichen zwischen Funktionsname und öffnender runder Klammer der Argumentenliste im Aufruf
+ - Leerzeichen zwischen runder Klammer und Argumentenliste im Aufruf
+ - Leerzeichen zwischen runde Klammern um leere Argumentenliste im Aufruf
+ - Leerzeichen nach Schlüsselwörtern in Anweisungen (if, for, catch, ...)
+ - Leerzeichen zwischen runden Klammern von Anweisungen
+ - Leerzeichen zwischen runden Klammern von Ausdrücken
+ - Leerzeichen zwischen runden Klammern für cast-Operatoren
+ - Leerzeichen nach einem cast-Operator einfügen
+ - Leerzeichen vor öffnender eckiger Klammer
+ - Leerzeichen zwischen leeren eckigen Klammern
+ - Leerzeichen zwischen eckigen Klammern
+ - Leerzeichen nach Komma
+ - Leerzeichen vor Komma
+ - Leerzeichen nach Objektoperator
+ - Leerzeichen vor Objektoperator
+ - Leerzeichen nach Semikolons in for-Schleifen
+ - Leerzeichen vor Semikolons in for-Schleifen
+ - Leerzeichen vor und nach binären Operatoren
+ - Block auf einzelner Zeile belassen
+ - Anweisungen und Deklarationen auf der gleichen Zeile belassen
