@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<fs>
+	<metadata>
+		<meta id="1" type="container">
+			<AccessTime>0</AccessTime>
+			<ModificationTime>0</ModificationTime>
+		</meta>
+		<meta id="2" type="item">
+			<AccessTime>0</AccessTime>
+			<ModificationTime>0</ModificationTime>
+			<Contents><![CDATA[]]></Contents>
+		</meta>
+		<meta /><!-- Der vorige Knoten ist ungültig -->
+	</metadata>
+	<tree name="tree">
+		<node name="node1" type="container">
+			<node name="node2" type="container">
+				<node name="node4" type="leaf" metaID="2" />
+			</node>
+		</node>
+	</tree>
+</fs>

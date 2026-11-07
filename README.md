@@ -20,6 +20,7 @@ Comments and docs are mostly in German.
 | `library/Curly/` | **The framework (v1.0)**: class loaders (namespace, include path, recursive, dispatcher), bootstrap sections, event dispatcher, callbacks/delegates, typed and serial collections, `BigDecimal`, `String`, `Ensure` (type checks), hashes, streams and stream wrappers (string, Base64, GZ), YAML config, ACL (DB-backed), asset manager and view helpers, expression evaluator, HTTP status codes, `FrameworkBundler` (packs selected ZF1 components), source code tools (PHP tokenizer, PHP/CSS/JS minimizers, a PHP preprocessor with `#define`/`#ifdef`/`#include`, a DocComment parser) |
 | `library/CurlyLight/` | Reduced copy of `Curly` plus parts of `CurlyX` |
 | `library/Laboratory/CurlyX/` | Experimental packages: archive format (compiler/parser with plain, compress and crypt chains), installer with manifest/XSD, extended PDO (`EPDO`) and DB drivers, module system, XML parser, PHP source formatter, YAML |
+| `library/Laboratory/FS/` | **FS** (May/June 2009, unfinished): virtual file system tree with a DOM-like node API (containers/leaves, siblings, insert/remove), paths, typed metadata, visitors, a tree registry, XML deserialization and a PHP stream wrapper (`fopen`/`fread`/`fwrite`/`fseek`/`fstat` on tree nodes, backed by `Curly_Stream_String`). Directory operations, node creation in `w`/`a` mode and parts of the XML reader are still `TODO`. `Test.php` and `testXmlReader.php` are ad-hoc `var_dump` scripts. Added to this repo later from a separate working copy. |
 | `library/CurlyBracketDe/` | Site-specific controller, DB and page classes for curlybracket.de |
 | `applications/curlybracketde/` | ZF1 application for the curlybracket.de website (content pages, build page) |
 | `applications/bundler/` | ZF1 web UI for `Curly_FrameworkBundler` |
@@ -34,7 +35,7 @@ Comments and docs are mostly in German.
 - Zend Framework 1.x (not included), and for some tests Doctrine 1.0
 - Source files are encoded in **ISO-8859-1** with CRLF line endings
 
-About 24 of 511 PHP files no longer parse on PHP 8, mostly because of `$str{$i}`
+About 26 of 532 PHP files no longer parse on PHP 8, mostly because of `$str{$i}`
 string offsets and other removed syntax.
 
 ## Removed for publication
